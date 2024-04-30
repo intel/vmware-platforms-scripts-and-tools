@@ -1,0 +1,8 @@
+transformers==4.31.0
+peft
+gradio
+termcolor
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.1.0+cpu 
+--extra-index-url https://pytorch-extension.intel.com/release-whl/stable/cpu/us/
+intel_extension_for_pytorch==2.1.0 
