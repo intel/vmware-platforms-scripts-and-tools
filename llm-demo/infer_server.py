@@ -625,8 +625,9 @@ def main(args: Namespace) -> None:
 
         print("Stop ids: " + str(stop_tokens))
 
-        if (args.peft_path is not None) and args.quant_name_or_path is not None:
+        if (args.peft_path is not None) and args.quant_name_or_path is None:
             model = PeftModel.from_pretrained(model, args.peft_path)
+            model = model.merge_and_unload()
 
         if args.quant_name_or_path is None:
             amp_enabled = None
